@@ -1,5 +1,27 @@
 <!--This is index.wxml-->
 <view class="navigationBar">
-  <image class="navIcon" src="/images/science.png"></image>
-  <text class="navTitle">知微</text>
+  <image class="navIcon" src="/images/science.png" > </image>
+  <view class="navTitle">知微</view> 
 </view>
+  <view class='newsTabs'>
+         <view class="tab" wx:for="{{tabs}}" wx:key="text">
+          <view>{{item.text}}</view>
+          <view class="item.selectLine"></view>
+         </view>
+  </view>
+  <view class="top">
+   <image src="/images/not-applicable.png" class="topIcon"></image>
+    <view class="topNews">手提十斤锟斤拷，口中只呼烫烫烫</view>
+  </view>
+  <view class="newsList">
+    <view class="newsListItems" wx:for="{{news}}" wx:key="">
+      <view class="newsInfo">
+        <view class="newsTitle">{{}}</view>
+        <view class="newsDes">
+          <view class="newsSour"></view>
+          <view calss="newsDate"></view>
+        </view>
+      </view>
+      <image></image>
+    </view>
+  </view>
