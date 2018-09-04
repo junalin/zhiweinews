@@ -1,0 +1,22 @@
+.navigationBar{
+  position:fixed;
+  top:0 rpx;
+  left:0 rpx;
+  width: 100%;
+  height: 130rpx;
+  z-index: -1;
+}
+.navIcon{
+  position:relative;
+  width:55rpx;
+  height:55rpx;
+  top: 70rpx;
+  left:300rpx;
+}
+.navTitle{
+  position:relative;
+  font-size: 38rpx;
+  line-height: 53rpx;
+  top: 58rpx;
+  left: 300rpx;
+}

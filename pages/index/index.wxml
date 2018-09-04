@@ -1,0 +1,5 @@
+<!--This is index.wxml-->
+<view class="navigationBar">
+  <image class="navIcon" src="/images/science.png"></image>
+  <text class="navTitle">知微</text>
+</view>
