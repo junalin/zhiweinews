@@ -33,14 +33,14 @@ height: 60rpx;
   color: white;
   opacity: 0.8;
 }
-.top{
+.topNews{
 position: relative;
 margin-top:8rpx;
 padding-bottom: 326rpx;
 }
 .topIcon{
   position: absolute;
-  background-color: #2b4837;
+  /*background-color: #2b4837;*/
   width:700rpx;
   height:360rpx;
   left: 25rpx;
@@ -51,11 +51,11 @@ color: white;
 text-align: center;
 opacity: 0.8;
 }
-.news-list{
+.newsList{
   display:flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.news-info{
-
+.newsListItems{
+height: 200rpx;
 }

@@ -1,27 +1,30 @@
 <!--This is index.wxml-->
-<view class="navigationBar">
-  <image class="navIcon" src="/images/science.png" > </image>
-  <view class="navTitle">知微</view> 
-</view>
-  <view class='newsTabs'>
-         <view class="tab" wx:for="{{tabs}}" wx:key="text">
-          <view>{{item.text}}</view>
-          <view class="item.selectLine"></view>
-         </view>
+  <view class="navigationBar">
+    <image class="navIcon" src="/images/science.png" > </image>
+    <view class="navTitle">知微</view> 
   </view>
-  <view class="top">
-   <image src="/images/not-applicable.png" class="topIcon"></image>
-    <view class="topNews">手提十斤锟斤拷，口中只呼烫烫烫</view>
+  <view class='newsTabs'>
+    <view class="newsTypeText {{item.select}}" wx:for="{{tabs}}" wx:key="text"  data-type="{             {item.code}}" bindtap="onNewsTypeTap">
+    <view>{{item.text}}</view>
+    <view class="item.selectLine"></view>
+    </view>
+  </view>
+  <view class="topNews">
+    <image src="{{topNews.firstImage}}" class="topIcon"></image>
+    <view class="topNewsTitle">{{topNews.title}}</view>
+    <view class="topNewsDate">{{topNews.date}}</view>
+    <view class="topNewsSource">{{topNews.source}}</view>
   </view>
   <view class="newsList">
-    <view class="newsListItems" wx:for="{{news}}" wx:key="">
+    <view class="newsListItems" wx:for="{{newsList}}" wx:key="" bindtap="onNewsTap" data-type="{{item.id}}">
       <view class="newsInfo">
-        <view class="newsTitle">{{}}</view>
+        <view class="newsTitle">{{item.title}}</view>
         <view class="newsDes">
-          <view class="newsSour"></view>
-          <view calss="newsDate"></view>
+            <view wx:if="{{item.source}}" class='newsSource'>{{item.source}}</view>
+            <view wx:else class="newsSource">佚名</view>
+          <view calss="newsDate">{{item.date}}</view>
         </view>
       </view>
-      <image></image>
+      <image src="{{item.firstImage}}"></image>
     </view>
   </view>
