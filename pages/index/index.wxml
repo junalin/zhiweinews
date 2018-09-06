@@ -1,30 +1,39 @@
-<!--This is index.wxml-->
-  <view class="navigationBar">
-    <image class="navIcon" src="/images/science.png" > </image>
-    <view class="navTitle">知微</view> 
-  </view>
-  <view class='newsTabs'>
-    <view class="newsTypeText {{item.select}}" wx:for="{{tabs}}" wx:key="text"  data-type="{             {item.code}}" bindtap="onNewsTypeTap">
-    <view>{{item.text}}</view>
-    <view class="item.selectLine"></view>
+  <view class="navWrapper">
+    <view class="navBarWrapper">
+      <image class="navIcon" src="/images/science.png" > </image>
+      <text class="navTitle">知微</text> 
+    </view>
+    <view class='newsTabsWrapper'>
+      <view class="newsTabs {{item.select}}" wx:for="{{newsTabs}}" wx:key="text" data-type="{{item.code}}" bindtap='onNewsTabsTap'>
+        <view>{{item.text}}</view>
+        <view class="{{item.selectLine}}"></view>
+      </view>
     </view>
   </view>
-  <view class="topNews">
-    <image src="{{topNews.firstImage}}" class="topIcon"></image>
-    <view class="topNewsTitle">{{topNews.title}}</view>
-    <view class="topNewsDate">{{topNews.date}}</view>
-    <view class="topNewsSource">{{topNews.source}}</view>
+
+  <view class="topWrapper">
+    <image src="{{top.firstImage}}" class="topBg" mode="aspectFill"> </image>
+      <view class="top">
+        <image src="{{top.firstImage}}" class="topIcon" mode="aspectFill"></image>
+        <view class="topDes">
+          <view class="topTitle">{{top.title}}</view>
+            <view wx:if="{{item.source}}" class='topSource'>{{item.source}}</view>
+            <view wx:else class="topSource">佚名</view>
+          <view class="topDate">{{top.date}}</view>
+        </view>
+      </view>
   </view>
-  <view class="newsList">
+
+  <view class="newsListWrapper">
     <view class="newsListItems" wx:for="{{newsList}}" wx:key="" bindtap="onNewsTap" data-type="{{item.id}}">
       <view class="newsInfo">
         <view class="newsTitle">{{item.title}}</view>
         <view class="newsDes">
             <view wx:if="{{item.source}}" class='newsSource'>{{item.source}}</view>
             <view wx:else class="newsSource">佚名</view>
-          <view calss="newsDate">{{item.date}}</view>
+        <view calss="newsDate">{{item.date}}</view>
         </view>
       </view>
-      <image src="{{item.firstImage}}"></image>
+      <image class="listIcon" src="{{item.firstImage}}"></image>
     </view>
   </view>
