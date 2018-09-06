@@ -1,8 +1,6 @@
   <view class="navWrapper">
-    <view class="navBarWrapper">
       <image class="navIcon" src="/images/science.png" > </image>
       <text class="navTitle">知微</text> 
-    </view>
     <view class='newsTabsWrapper'>
       <view class="newsTabs {{item.select}}" wx:for="{{newsTabs}}" wx:key="text" data-type="{{item.code}}" bindtap='onNewsTabsTap'>
         <view>{{item.text}}</view>
@@ -12,16 +10,14 @@
   </view>
 
   <view class="topWrapper">
-    <image src="{{top.firstImage}}" class="topBg" mode="aspectFill"> </image>
-      <view class="top">
-        <image src="{{top.firstImage}}" class="topIcon" mode="aspectFill"></image>
+    <image src="{{top.firstImage}}" class="topBg" mode="center"> </image>
+        <image src="{{top.firstImage}}" class="topPic" mode="center"></image>
         <view class="topDes">
           <view class="topTitle">{{top.title}}</view>
             <view wx:if="{{item.source}}" class='topSource'>{{item.source}}</view>
             <view wx:else class="topSource">佚名</view>
           <view class="topDate">{{top.date}}</view>
         </view>
-      </view>
   </view>
 
   <view class="newsListWrapper">
@@ -34,6 +30,6 @@
         <view calss="newsDate">{{item.date}}</view>
         </view>
       </view>
-      <image class="listIcon" src="{{item.firstImage}}"></image>
+      <image class="listPic" src="{{item.firstImage}}" ></image>
     </view>
   </view>
