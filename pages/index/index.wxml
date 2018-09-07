@@ -10,8 +10,13 @@
   </view>
 
   <view class="topWrapper">
-    <image src="{{top.firstImage}}" class="topBg" mode="center"> </image>
-        <image src="{{top.firstImage}}" class="topPic" mode="center"></image>
+      <block wx:if="{{top.firstImage}}">
+      <image class="topBg" src="{{top.firstImage}}" mode='scaleToFill' ></image>
+      </block>
+      <block wx:else><image class="listPic" src="/images/other.jpg" mode='scaleToFill' ></image>
+      </block>
+        <view class="frame"></view>
+        <view class="desBg"></view>
         <view class="topDes">
           <view class="topTitle">{{top.title}}</view>
             <view wx:if="{{item.source}}" class='topSource'>{{item.source}}</view>
@@ -30,6 +35,10 @@
         <view calss="newsDate">{{item.date}}</view>
         </view>
       </view>
-      <image class="listPic" src="{{item.firstImage}}" ></image>
+      <block wx:if="{{item.firstImage}}">
+      <image class="listPic" src="{{item.firstImage}}" mode='scaleToFill' ></image>
+      </block>
+      <block wx:else><image class="listPic" src="/images/other.jpg" mode='scaleToFill' ></image>
+      </block>
     </view>
   </view>

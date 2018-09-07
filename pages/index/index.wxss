@@ -3,6 +3,7 @@
   position: fixed;  
   height: 210rpx;
   width: 100%;
+  z-index: 66;
 }
 
 .navIcon{
@@ -58,31 +59,49 @@
 }
 
 .topBg{
-  opacity: 0.1;
-  z-index:-2;
+  opacity: 1;
+  z-index:-1;
   width: 100%;
-  height:460rpx;
+  height:410rpx;
   display: block;
 }
-.topPic{
+
+.frame{
   position: absolute;
-  height: 423rpx;
-  width: 690rpx;
-  top: 20rpx;
-  left: 30rpx;
-  border-radius: 10rpx;
-  z-index:-1; 
+  height: 352rpx;
+  width: 694rpx;
+  top: 0rpx;
+  left: 0rpx;
+  border: 12px solid rgba(255,255,255,0.7);
+  background-clip: padding-box;
 }
 
 .topDes{
   position: absolute;
-  color: white;
+  color:aliceblue;
+  font-size: 36rpx;
+  line-height: 42rpx;
+  font-weight: bolder 400;
   text-align: left;
-  top: 200rpx;
+  top: 260rpx;
   padding: 0 60rpx;
-  opacity: 0.8;
+  opacity: 0.9; 
+  z-index: 1;
 }
-
+.desBg{
+  position: absolute;
+  background-color: #2b4837;
+  opacity: 0.6;
+  top: 260rpx;
+  left: 30rpx;
+  height: 120rpx;
+  width: 694rpx;
+}
+.topDate{
+  position: absolute;
+  top: 80rpx;
+  left: 160rpx;
+}
 .newsListWrapper{
   position: relative;
   top: 210rpx;
@@ -90,25 +109,25 @@
 
 .newsListItems{
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-bottom: 4rpx solid #2b4837;
   padding: 30rpx 0;
   margin: 0 30rpx;
 }
 
-.news-info {
- //width: 533rpx; 
+.newsInfo {
+ width: 533rpx; 
 }
 
 .listPic{
   width: 177rpx;
-  height: 111rpx;
+  height: 120rpx;
+  border-radius: 6rpx;
 }
 
 .newsTitle {
   overflow: hidden;
   font-size: 35rpx;
+  font-family: "Microsoft YaHei",微软雅黑;
   line-height: 49rpx;
   padding-right: 10rpx;
   margin-bottom: 10rpx; 
@@ -118,7 +137,9 @@
   display: flex;
   font-size: 25rpx;
   line-height: 35rpx;
+  font-family: "Microsoft YaHei",微软雅黑;
   justify-content: space-between;
   align-items: flex-end;
-  margin-right: 15rpx;
+  margin-right: 20rpx;
+  opacity: 0.8;
 }
