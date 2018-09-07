@@ -1,7 +1,7 @@
 .navWrapper{
   background-color:#2b4837;
   position: fixed;  
-  height: 210rpx;
+  height: 200rpx;
   width: 100%;
   z-index: 66;
 }
@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  top: 145rpx;
+  top: 136rpx;
 }
 
 .newsTabs{
@@ -55,11 +55,10 @@
 
 .topWrapper{
   position: relative;
-  top: 210rpx;
+  top: 200rpx;
 }
 
 .topBg{
-  opacity: 1;
   z-index:-1;
   width: 100%;
   height:410rpx;
@@ -68,11 +67,11 @@
 
 .frame{
   position: absolute;
-  height: 352rpx;
+  height: 353rpx;
   width: 694rpx;
   top: 0rpx;
   left: 0rpx;
-  border: 12px solid rgba(255,255,255,0.7);
+  border: 30rpx solid rgba(255,255,255,0.7);
   background-clip: padding-box;
 }
 
@@ -81,30 +80,30 @@
   color:aliceblue;
   font-size: 36rpx;
   line-height: 42rpx;
-  font-weight: bolder 400;
   text-align: left;
-  top: 260rpx;
+  top: 250rpx;
   padding: 0 60rpx;
   opacity: 0.9; 
   z-index: 1;
 }
+
 .desBg{
   position: absolute;
   background-color: #2b4837;
   opacity: 0.6;
-  top: 260rpx;
+  top: 253rpx;
   left: 30rpx;
-  height: 120rpx;
+  height: 130rpx;
   width: 694rpx;
 }
-.topDate{
+.topTime{
   position: absolute;
-  top: 80rpx;
+  top: 85rpx;
   left: 160rpx;
 }
 .newsListWrapper{
   position: relative;
-  top: 210rpx;
+  top: 200rpx;
 }
 
 .newsListItems{

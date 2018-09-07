@@ -1,0 +1,23 @@
+   <view class="navWrapper">
+      <image class="backIcon" src="/images/back.png" bindtap='backToHome'> </image>
+      <text class="navTitle">知微</text> 
+  </view>
+  <view class='all-content'>
+    <view class='head'>
+    <view class='title'>{{detailData.title}}</view>
+    <view class='desc'>
+      <view wx:if='{{detailData.source}}'>{{detailData.source}}</view>
+      <view wx:else>佚名</view>
+      <view class='time'>{{detailData.date}}</view>
+      <view>阅读数：{{detailData.readCount}}</view>
+    </view>
+    <image src='{{detailData.firstImage}}' class='firstImage'></image>
+  </view>
+  <view wx:for='{{detailData.content}}' wx:key='{{detailData}}'>
+    <view wx:if='{{item.type == "p"}}' class='paragraph-content'>{{item.text}}</view>
+    <view wx:if='{{item.type == "strong"}}' class='paragraph-title'>{{item.text}}</view>
+    <block wx:if='{{item.type=="image"}}' > 
+      <image src='{{item.src}}' class='content-image'></image>
+    </block>   
+  </view>
+  </view>

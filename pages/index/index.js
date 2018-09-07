@@ -25,7 +25,22 @@ Page({
       success: res=>{
         let result=res.data.result
         this.setNewsData(result)
+      },
+      fail: res => {
+        wx.showToast({
+          icon: "none",
+          title: 'code:404'
+        })
+      },
+      complete: () => {
+        callback && callback()
       }
+    })
+  },
+  //下拉刷新和结束刷新
+  onPullDownRefresh() {
+    this.getLatestNews(TYPEINDEX, () => {
+      wx.stopPullDownRefresh()
     })
   },
   //更新top和newsList
@@ -65,6 +80,14 @@ Page({
     newsTabs[TYPEINDEX].selectLine = 'selected-line'
     this.setData({
       newsTabs: newsTabs
+    })
+  },
+  //点击新闻时触发函数
+  onNewsTap(event) {
+    let id = event.currentTarget.dataset.type
+    let newsTabs = this.data.newsTabs[TYPEINDEX].type
+    wx.navigateTo({
+      url: '../detail/detail?id=' + id + '&type=' + newsTabs
     })
   },
 })
