@@ -20,7 +20,7 @@
         <view class="topDes">
           <view class="topTitle">{{top.title}}</view>
             <view wx:if="{{item.source}}" class='topSource'>{{item.source}}</view>
-            <view wx:else class="topSource">佚名</view>
+            <view wx:else class="topSource">佚名 </view>
           <view class="topTime">{{top.date}}</view>
         </view>
   </view>

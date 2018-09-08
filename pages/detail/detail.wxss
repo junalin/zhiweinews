@@ -19,13 +19,13 @@
   position: absolute;
   top:70rpx;
   left:80rpx;
-  font-family: "HYXinRenWenSongW",汉仪新人文宋,"Microsoft YaHei",微软雅黑;
+  font-family: "HYXinRenWenSongW",汉仪新人文宋,"SimSun","Microsoft YaHei",微软雅黑;
   font-size: 40rpx;
   line-height: 56rpx;
   color: #2b4837;
 }
 
-.all-content {
+.allContent {
   position: absolute;
   top: 160rpx;
   margin-left: 30rpx;

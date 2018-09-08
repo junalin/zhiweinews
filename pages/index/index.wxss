@@ -18,7 +18,7 @@
   position: absolute;
   top:70rpx;
   left:80rpx;
-  font-family: "HYXinRenWenSongW",汉仪新人文宋,"Microsoft YaHei",微软雅黑;
+  font-family: "HYXinRenWenSongW",汉仪新人文宋,"SimSun","Microsoft YaHei",微软雅黑;
   font-size: 40rpx;
   line-height: 56rpx;
   color: white;
@@ -78,10 +78,13 @@
 .topDes{
   position: absolute;
   color:aliceblue;
-  font-size: 36rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 30rpx;
   line-height: 42rpx;
   text-align: left;
-  top: 250rpx;
+  top: 256rpx;
   padding: 0 60rpx;
   opacity: 0.9; 
   z-index: 1;
@@ -96,11 +99,7 @@
   height: 130rpx;
   width: 694rpx;
 }
-.topTime{
-  position: absolute;
-  top: 85rpx;
-  left: 160rpx;
-}
+
 .newsListWrapper{
   position: relative;
   top: 200rpx;
@@ -108,7 +107,7 @@
 
 .newsListItems{
   display: flex;
-  border-bottom: 4rpx solid #2b4837;
+  border-bottom: 3rpx solid #2b4837;
   padding: 30rpx 0;
   margin: 0 30rpx;
 }
@@ -125,9 +124,9 @@
 
 .newsTitle {
   overflow: hidden;
-  font-size: 35rpx;
+  font-size: 32rpx;
   font-family: "Microsoft YaHei",微软雅黑;
-  line-height: 49rpx;
+  line-height: 45rpx;
   padding-right: 10rpx;
   margin-bottom: 10rpx; 
 }
