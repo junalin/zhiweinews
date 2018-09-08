@@ -1,4 +1,3 @@
-// pages/detail/detail.js
 Page({
   data: {
     newsId: 0,
@@ -32,7 +31,8 @@ Page({
       }
     })
   },
-  backToHome() {
+  //返回键触发函数
+  backToHomepage() {
     wx.navigateBack({
       delta: 1
     })

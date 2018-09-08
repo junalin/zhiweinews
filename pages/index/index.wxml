@@ -2,7 +2,7 @@
       <image class="navIcon" src="/images/science.png" > </image>
       <text class="navTitle">知微</text> 
     <view class='newsTabsWrapper'>
-      <view class="newsTabs {{item.select}}" wx:for="{{newsTabs}}" wx:key="text" data-type="{{item.code}}" bindtap='onNewsTabsTap'>
+      <view class="newsTabs {{item.select}}" wx:for="{{newsTabs}}" wx:key="text" data-type="{{item.num}}" bindtap='onNewsTabsTap'>
         <view>{{item.text}}</view>
         <view class="{{item.selectLine}}"></view>
       </view>
@@ -32,7 +32,7 @@
         <view class="newsDes">
             <view wx:if="{{item.source}}" class='newsSource'>{{item.source}}</view>
             <view wx:else class="newsSource">佚名</view>
-        <view calss="newsTime">{{item.date}}</view>
+        <view class="newsTime">{{item.date}}</view>
         </view>
       </view>
       <block wx:if="{{item.firstImage}}">

@@ -1,5 +1,5 @@
    <view class="navWrapper">
-      <image class="backIcon" src="/images/back.png" bindtap='backToHome'> </image>
+      <image class="backIcon" src="/images/back.png" bindtap='backToHomepage'> </image>
       <text class="navTitle">知微</text> 
   </view>
 
@@ -7,19 +7,19 @@
   <view class='allContent'>
     <view class='head'>
     <view class='title'>{{detailData.title}}</view>
-    <view class='desc'>
+    <view class='des'>
       <view wx:if='{{detailData.source}}'>{{detailData.source}}</view>
       <view wx:else>佚名</view>
       <view class='time'>{{detailData.date}}</view>
-      <view>阅读数：{{detailData.readCount}}</view>
+      <view>已阅：{{detailData.readCount}}</view>
     </view>
   </view>
   
   <view wx:for='{{detailData.content}}' wx:key='{{detailData}}'>
-    <view wx:if='{{item.type == "p"}}' class='paragraph-content'>{{item.text}}</view>
-    <view wx:if='{{item.type == "strong"}}' class='paragraph-title'>{{item.text}}</view>
+    <view wx:if='{{item.type == "p"}}' class='paraContent'>{{item.text}}</view>
+    <view wx:if='{{item.type == "strong"}}' class='paraTitle'>{{item.text}}</view>
     <block wx:if='{{item.type=="image"}}' > 
-      <image src='{{item.src}}' class='content-image'></image>
+      <image src='{{item.src}}' class='contentImage'></image>
     </block>   
   </view>
   </view>

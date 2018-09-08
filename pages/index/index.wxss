@@ -18,7 +18,7 @@
   position: absolute;
   top:70rpx;
   left:80rpx;
-  font-family: "HYXinRenWenSongW",汉仪新人文宋,"SimSun","Microsoft YaHei",微软雅黑;
+  font-family: "HYXinRenWenSongW",汉仪新人文宋,"Microsoft YaHei",微软雅黑;
   font-size: 40rpx;
   line-height: 56rpx;
   color: white;
@@ -46,7 +46,7 @@
   line-height: 50rpx;
 }
 
-.selected-line {
+.selectedLine {
   position: absolute;
   left: 20rpx;
   right: 20rpx;
@@ -80,7 +80,6 @@
   color:aliceblue;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   font-size: 30rpx;
   line-height: 42rpx;
   text-align: left;
@@ -100,6 +99,15 @@
   width: 694rpx;
 }
 
+.topTime{
+  padding-left: 30rpx;
+  opacity: 0.7;
+}
+
+.topSource{
+  opacity: 0.7;
+}
+
 .newsListWrapper{
   position: relative;
   top: 200rpx;
@@ -107,25 +115,25 @@
 
 .newsListItems{
   display: flex;
+  align-items: center;
   border-bottom: 3rpx solid #2b4837;
-  padding: 30rpx 0;
+  padding: 26rpx 0;
   margin: 0 30rpx;
 }
 
 .newsInfo {
- width: 533rpx; 
+ width: 530rpx; 
 }
 
 .listPic{
-  width: 177rpx;
+  width: 180rpx;
   height: 120rpx;
   border-radius: 6rpx;
 }
 
 .newsTitle {
-  overflow: hidden;
-  font-size: 32rpx;
   font-family: "Microsoft YaHei",微软雅黑;
+  font-size: 32rpx;
   line-height: 45rpx;
   padding-right: 10rpx;
   margin-bottom: 10rpx; 
@@ -136,8 +144,10 @@
   font-size: 25rpx;
   line-height: 35rpx;
   font-family: "Microsoft YaHei",微软雅黑;
-  justify-content: space-between;
-  align-items: flex-end;
+  text-align: left;
   margin-right: 20rpx;
-  opacity: 0.8;
+  opacity: 0.7;
+}
+.newsTime{
+  padding-left: 30rpx;
 }

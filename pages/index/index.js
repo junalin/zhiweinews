@@ -2,13 +2,13 @@ var TYPEINDEX = 0 // 新闻种类在this.data.newsTabs数组中的位置
 Page({
   data:{
     newsTabs: [//新闻类别栏的data
-      {text: '国内',type: 'gn',select: 'selected',selectLine: 'selected-line',code: 0}, 
-      {text: '国际',type: 'gj',select: '',selectLine: '',code: 1},
-      {text: '财经',type: 'cj',select: '',selectLine: '',code: 2},
-      {text: '娱乐',type: 'yl',select: '',selectLine: '',code: 3},
-      {text: '军事',type: 'js',select: '',selectLine: '',code: 4},
-      {text: '体育',type: 'ty',select: '',selectLine: '',code: 5},
-      {text: '其他',type: 'other',select: '',selectLine: '',code: 6}
+      {text: '国内',type: 'gn',select: 'selected',selectLine: 'selectedLine',num: 0}, 
+      {text: '国际',type: 'gj',select: '',selectLine: '',num: 1},
+      {text: '财经',type: 'cj',select: '',selectLine: '',num: 2},
+      {text: '娱乐',type: 'yl',select: '',selectLine: '',num: 3},
+      {text: '军事',type: 'js',select: '',selectLine: '',num: 4},
+      {text: '体育',type: 'ty',select: '',selectLine: '',num: 5},
+      {text: '其他',type: 'other',select: '',selectLine: '',num: 6}
       ],
     top:{},//top新闻data
     newsList:[]//一般新闻data
@@ -77,7 +77,7 @@ Page({
     newsTabs.push(temp)
     }
     newsTabs[TYPEINDEX].select = 'selected'
-    newsTabs[TYPEINDEX].selectLine = 'selected-line'
+    newsTabs[TYPEINDEX].selectLine = 'selectedLine'
     this.setData({
       newsTabs: newsTabs
     })
@@ -87,7 +87,7 @@ Page({
     let id = event.currentTarget.dataset.type
     let newsTabs = this.data.newsTabs[TYPEINDEX].type
     wx.navigateTo({
-      url: '../detail/detail?id=' + id + '&type=' + newsTabs
+      url: '../detail/detail?id=' + id
     })
   },
 })
